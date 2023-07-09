@@ -33,7 +33,7 @@ import {
             </Text>
           </Stack>
           <Githubcalendar
-            username="rohitnayal"
+            username="rohitnayal12"
             style={{width: "100%", margin : "auto"}}
             blockMargin={5}
             fontSize={16}
@@ -76,7 +76,7 @@ import {
               borderRadius={"20px"}
             />
             <Image
-              src="https://github-readme-streak-stats.herokuapp.com/?user=rohitnayal12&"
+              src="https://github-readme-streak-stats.herokuapp.com/?user=rohitnayal12"
               alt="rohit"
               w={"100%"}
               borderRadius={"20px"}

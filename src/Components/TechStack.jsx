@@ -59,8 +59,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiHtml5 size="50px" />
-                        <Text mt={2}>HTML</Text>
+                        <SiHtml5 size="50px" class="skills-card-img" />
+                        <Text mt={2} class="skills-card-name">HTML</Text>
                     </Box>
 
                     <Box
@@ -75,8 +75,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiCss3 size="50px" />
-                        <Text mt={2}>CSS</Text>
+                        <SiCss3 size="50px" class="skills-card-img" />
+                        <Text mt={2} class="skills-card-name">CSS</Text>
                     </Box>
 
                     <Box
@@ -91,8 +91,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiJavascript size="50px" />
-                        <Text mt={2}>Javascript</Text>
+                        <SiJavascript size="50px" class="skills-card-img" />
+                        <Text mt={2} class="skills-card-name">Javascript</Text>
                     </Box>
 
                     <Box
@@ -107,8 +107,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiReact size="50px" />
-                        <Text mt={2}>React</Text>
+                        <SiReact size="50px" class="skills-card-img" />
+                        <Text mt={2} class="skills-card-name">React</Text>
                     </Box>
 
                     <Box
@@ -123,8 +123,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiRedux size="50px" />
-                        <Text mt={2}>Redux</Text>
+                        <SiRedux size="50px" class="skills-card-img" />
+                        <Text mt={2} class="skills-card-name">Redux</Text>
                     </Box>
 
                     
@@ -146,8 +146,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiChakraui size="50px" />
-                        <Text mt={2}>Chakra UI</Text>
+                        <SiChakraui size="50px" class="skills-card-img" />
+                        <Text mt={2} class="skills-card-name">Chakra UI</Text>
                     </Box>
                    
                    
@@ -164,8 +164,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiTypescript size="50px" />
-                        <Text mt={2}>TypeScript</Text>
+                        <SiTypescript size="50px" class="skills-card-img"/>
+                        <Text mt={2} class="skills-card-name">TypeScript</Text>
                     </Box>
 
 
@@ -181,8 +181,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiGit size="50px" />
-                        <Text mt={2}>Git</Text>
+                        <SiGit size="50px" class="skills-card-img" />
+                        <Text mt={2} class="skills-card-name">Git</Text>
                     </Box>
 
                     <Box
@@ -197,8 +197,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiGithub size="50px" />
-                        <Text mt={2}>Github</Text>
+                        <SiGithub size="50px" class="skills-card-img" />
+                        <Text mt={2} class="skills-card-name">Github</Text>
                     </Box>
                     <Box
                         border={"1px solid gray"}
@@ -212,8 +212,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiVercel size="50px" />
-                        <Text mt={2}>Vercel</Text>
+                        <SiVercel size="50px" class="skills-card-img"/>
+                        <Text mt={2} class="skills-card-name">Vercel</Text>
                     </Box>
 
                     <Box
@@ -228,8 +228,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiPostman size="50px" />
-                        <Text mt={2}>Postman</Text>
+                        <SiPostman size="50px" class="skills-card-img"/>
+                        <Text mt={2} class="skills-card-name">Postman</Text>
                     </Box>
                     <Box
                         border={"1px solid gray"}
@@ -243,8 +243,8 @@ const Techstack = () => {
                         flexDirection="column"
                         alignItems={"center"}
                     >
-                        <SiSlack size="50px" />
-                        <Text mt={2}>Slack</Text>
+                        <SiSlack size="50px" class="skills-card-img" />
+                        <Text mt={2} class="skills-card-name">Slack</Text>
                     </Box>
                 </Grid>
             </Box>

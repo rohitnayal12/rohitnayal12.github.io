@@ -200,6 +200,7 @@ const Home = () => {
                                     _focus={{
                                         bg: "gray.200",
                                     }}
+                                    id="resume-link-2"
                                 >
                                     <a
                                         href={""}

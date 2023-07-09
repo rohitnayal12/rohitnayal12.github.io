@@ -60,13 +60,15 @@ export default function Navbar(props) {
                             display={{ base: "none", md: "flex" }}
                             fontSize="18px"
                         >
-                            <a href="#home">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#skills">Skills</a>
-                            <a href="#projects">Projects</a>
-                            <a href="#contact">Contacts</a>
+                            <a href="#home"  class="nav-link home">Home</a>
+                            <a href="#about"  class="nav-link about">About</a>
+                            <a href="#skills" class="nav-link skills">Skills</a>
+                            <a href="#projects" class="nav-link projects">Projects</a>
+                            <a href="#contact" class="nav-link contact">Contacts</a>
                             <a
-                                href={""}
+                                href={" "}
+                                id="resume-link-1"
+                                class="nav-link resume"
                                 target="_blank"
                                 rel="noreferrer"
                                 download=""
@@ -107,7 +109,7 @@ export default function Navbar(props) {
                                 <MenuItem>
                                     {" "}
                                     <a
-                                        href={""}
+                                        href={" "}
                                         target="_blank"
                                         rel="noreferrer"
                                         download="https://drive.google.com/uc?export=download&id=1jK398TiBbgaBiaDkIKm71EMsmH515w4v"
@@ -155,7 +157,7 @@ export default function Navbar(props) {
                                 Contacts
                             </a>
                             <a
-                                href={""}
+                                href={" "}
                                 target="_blank"
                                 rel="noreferrer"
                                 download="https://drive.google.com/uc?export=download&id=1jK398TiBbgaBiaDkIKm71EMsmH515w4v"

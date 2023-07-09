@@ -74,10 +74,12 @@ const Contact = () => {
                         <StatsCard
                             title={"Mobile Number"}
                             stat={"+91-9536917997"}
+                            id="contact-phone"
                             icon={<BsPhoneFill size={"3em"} />}
                         />
                         <StatsCard
                             title={"Email Id"}
+                            id="contact-email"
                             stat={"rohitnayalkld@gmail.com"}
                             icon={<MdEmail size={"3em"} />}
                         />
