@@ -81,8 +81,8 @@ const Home = () => {
                     >
                         A MERN Stack Developer
                     </Text>
-                    <Heading>Hi, I'm Rohit Nayal</Heading>
-                    <Text color={"gray.500"} fontSize={"lg"}>
+                    <Heading id="user-detail-name" >Hi, I'm Rohit Nayal</Heading>
+                    <Text id="user-detail-intro" color={"gray.500"} fontSize={"lg"}>
                         A highly motivated and adaptable individual with a passion for
                         implementing technical and logical skills in the creative
                         domain. Specializes in quickly learning new skills and tech
@@ -140,6 +140,7 @@ const Home = () => {
                             paddingBottom={16}
                         >
                             <Avatar
+                                className="home-img"
                                 size={"xl"}
                                 src={result.avatar_url}
                                 alt={"Avatar Alt"}

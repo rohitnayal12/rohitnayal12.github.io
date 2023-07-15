@@ -45,6 +45,7 @@ const Techstack = () => {
                     alignItems="center"
                     gap={12}
                     justifyContent="center"
+                    id="skills-card"
                 >
 
                     <Box
