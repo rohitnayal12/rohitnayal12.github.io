@@ -103,7 +103,7 @@ const Education = () => {
                                 Government Polytechnic Kashipur
                             </Text>
                             <Text fontWeight={100} fontSize={"15px"}>
-                                2014 - 2017 (Drop-Out)
+                                2014 - 2017 
                             </Text>
 
                             {/* <Text color={"white.100"} fontWeight={400} fontSize={"17px"}>

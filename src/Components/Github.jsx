@@ -67,28 +67,28 @@ import {
             padding="6px"
             m={4}
             borderRadius={"20px"}
-            width="100%"
+            width="90%"
             margin="auto"
             boxShadow= "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
           >
             <Image
               src="https://github-readme-stats.vercel.app/api?username=rohitnayal12&show_icons=true&locale=en"
               alt="rohit"
-              w={"800%"}
+              w={"35%"}
               borderRadius={"20px"}
               id="github-stats-card"
             />
             <Image
               src="https://github-readme-streak-stats.herokuapp.com/?user=rohitnayal12"
               alt="rohit"
-              w={"80%"}
+              w={"35%"}
               borderRadius={"20px"}
               id="github-streak-stats"
             />
             <Image
               src="https://github-readme-stats.vercel.app/api/top-langs/?username=rohitnayal12&layout=compact"
               alt="rohit"
-              w={"80%"}
+              w={"35%"}
               borderRadius={"20px"}
               id="github-top-langs"
             />

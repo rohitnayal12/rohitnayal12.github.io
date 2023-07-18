@@ -22,6 +22,23 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 export default function Navbar(props) {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { colorMode, toggleColorMode } = useColorMode();
+
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch('Rohit-Nayal-Resume.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Rohit-Nayal-Resume.pdf';
+                alink.click();
+            })
+        })
+    }
+
+
     return (
         <>
             <Box
@@ -67,7 +84,7 @@ export default function Navbar(props) {
                             <a href="#contact" class="nav-link contact">Contacts</a>
                             <a
                                 href={" "}
-                                id="resume-link-1"
+                                id="resume-button-1"
                                 class="nav-link resume"
                                 target="_blank"
                                 rel="noreferrer"
@@ -112,10 +129,8 @@ export default function Navbar(props) {
                                         href={" "}
                                         target="_blank"
                                         rel="noreferrer"
-                                        download="https://drive.google.com/uc?export=download&id=1jK398TiBbgaBiaDkIKm71EMsmH515w4v"
-                                        onClick={() => window.open(
-                                            "https://drive.google.com/file/d/12T-FecNZXpdlvb5Y4z2qpXgvzEF_EMSi/view"
-                                        )}
+                                        download="https://drive.google.com/file/d/1WoW_5ENmr8bnH1izNNUIXj-QXBVAlj8-/view?usp=sharing"
+                                        onClick={onButtonClick}
                                     >
                                         Resume
                                     </a>
@@ -160,10 +175,8 @@ export default function Navbar(props) {
                                 href={" "}
                                 target="_blank"
                                 rel="noreferrer"
-                                download="https://drive.google.com/uc?export=download&id=1jK398TiBbgaBiaDkIKm71EMsmH515w4v"
-                                onClick={() => window.open(
-                                    "https://drive.google.com/file/d/12T-FecNZXpdlvb5Y4z2qpXgvzEF_EMSi/view"
-                                )}
+                                download="https://drive.google.com/file/d/1WoW_5ENmr8bnH1izNNUIXj-QXBVAlj8-/view?usp=sharing"
+                                onClick={onButtonClick}
                             >
                                 Resume 
                             </a>

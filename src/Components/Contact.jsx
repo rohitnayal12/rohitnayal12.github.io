@@ -4,7 +4,7 @@ import { BsPhoneFill } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import { MdEmail } from "react-icons/md";
 
-const StatsCard = ({ title, stat, icon }) => {
+const StatsCard = ({ title, stat, icon,id }) => {
     return (
         <Stat
             px={{ base: 2, md: 4 }}
@@ -13,6 +13,7 @@ const StatsCard = ({ title, stat, icon }) => {
             border={"1px solid"}
             borderColor={useColorModeValue("gray.800", "gray.500")}
             rounded={"lg"}
+            id={id}
         >
             <Flex justifyContent={"space-between"}>
                 <Box pl={{ base: 2, md: 4 }}>
@@ -22,6 +23,7 @@ const StatsCard = ({ title, stat, icon }) => {
                     <StatNumber fontSize={"xl"} fontWeight={"medium"}>
                         {stat}
                     </StatNumber>
+
                 </Box>
                 <Box
                     my={"auto"}
@@ -74,12 +76,12 @@ const Contact = () => {
                         <StatsCard
                             title={"Mobile Number"}
                             stat={"+91-9536917997"}
-                            id="contact-phone"
+                            id={"contact-phone"}
                             icon={<BsPhoneFill size={"3em"} />}
                         />
                         <StatsCard
                             title={"Email Id"}
-                            id="contact-email"
+                            id={"contact-email"}
                             stat={"rohitnayalkld@gmail.com"}
                             icon={<MdEmail size={"3em"} />}
                         />
@@ -88,6 +90,20 @@ const Contact = () => {
                             stat={"Kaladhungi, Uttarakhand"}
                             icon={<GoLocation size={"3em"} />}
                         />
+                        {/* <Box style={{display:"flex",justifyContent:"space-around"}}> */}
+                        <StatsCard
+                            title={"Github"}
+                            stat={"rohitnayal12"}
+                            icon={<GoLocation size={"3em"} />}
+                        />
+                        <br/>
+                        <StatsCard
+                            title={"LinkedIn"}
+                            stat={"rohitnayal1234"}
+                            icon={<GoLocation size={"3em"} />}
+                        />
+                        {/* </Box> */}
+                        
                     </Grid>
                 </Box>
             </Box>

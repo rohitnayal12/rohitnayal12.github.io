@@ -22,7 +22,7 @@ const About = () => {
                             borderRadius="50%"
                             className="home-img"
                             m={[0, 0, 12]}
-                            ml={["0px", "0px", "90px"]}
+                             ml={["0px", "0px", "90px"]}
                             w={"300px"}
                             height={"300px"}
                             boxShadow="rgba(0, 0, 0, 0.2) 0px 20px 30px"
@@ -45,7 +45,7 @@ const About = () => {
                             >
                                 About Rohit Nayal
                             </Text>
-                            <Text color={"gray.500"} fontSize={"lg"}>
+                            <Text color={"gray.500"} fontSize={"lg"} id="user-detail-intro">
                                 I am an MERN Full Stack Developer with a strong understanding of Web Development
                                 and exceptional problem-solving skills in HTML, CSS, JavaScript, React  and Redux.
                                 . Currently,

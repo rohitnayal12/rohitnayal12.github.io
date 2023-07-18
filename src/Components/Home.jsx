@@ -58,6 +58,23 @@ const Home = () => {
             console.log(err);
         }
     };
+
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch('Rohit-Nayal-Resume.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Rohit-Nayal-Resume.pdf';
+                alink.click();
+            })
+        })
+    }
+
+
     return (
         <Container maxW={"7xl"} m={"auto"} paddingTop="80px" id="home">
             <Flex
@@ -207,10 +224,9 @@ const Home = () => {
                                         href={""}
                                         target="_blank"
                                         rel="noreferrer"
-                                        download=""
-                                        onClick={() => window.open(
-                                            "https://drive.google.com/file/d/12T-FecNZXpdlvb5Y4z2qpXgvzEF_EMSi/view?usp=drive_link"
-                                        )}
+                                        id="resume-button-2"
+                                        download="https://drive.google.com/file/d/1WoW_5ENmr8bnH1izNNUIXj-QXBVAlj8-/view?usp=sharing"
+                                        onClick={onButtonClick}
                                     >
                                         Resume
                                     </a>
