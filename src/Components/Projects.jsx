@@ -55,18 +55,19 @@ const projects = [
 
 function Project() {
   return (
-    <Box p={6} marginLeft="40px" marginRight="40px">
+    <Box id="projects" p={6} marginLeft="40px" marginRight="40px">
       <Text fontSize="2xl" fontWeight="bold" mb={4}>
         My Projects
       </Text>
       <Grid templateColumns="repeat(2, 1fr)" gap={6}>
         {projects.map((project, index) => (
-          <GridItem key={index}>
+          <GridItem key={index} class="project-card">
             <HStack spacing="50%">
               <Link
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                class="project-github-link"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -84,10 +85,11 @@ function Project() {
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                class="project-deployed-link"
                 _hover={{ textDecoration: 'none' }}
               >
                 <Box backgroundColor="blue.200" borderRadius="md" p={2} w="100px">
-                  <Text fontSize="xl" fontWeight="bold" color="blue.500">
+                  <Text fontSize="xl" fontWeight="bold" color="blue.500" >
                     Go Live
                   </Text>
                 </Box>
@@ -99,10 +101,10 @@ function Project() {
               alt={project.title}
               borderRadius="md"
             />
-            <Text mt={2} fontSize="lg" fontWeight="bold">
+            <Text mt={2} fontSize="lg" fontWeight="bold"  class="project-title">
               {project.title}
             </Text>
-            <Text fontSize="sm" color="gray.500">
+            <Text fontSize="sm" color="gray.500" class="project-tech-stack">
               {project.techStack}
             </Text>
             <Text mt={2}>{project.description}</Text>
