@@ -36,11 +36,11 @@ const Education = () => {
                                 align={"center"}
                                 justify={"center"}
                                 color={"white"}
-                                rounded={"full"}
+                                // rounded={"full"}
                                 bg={"gray.100"}
                                 mb={1}
                             >
-                                <Image src="https://masaischool.com/img/navbar/logo.svg" alt="logo" />
+                                <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpuvIOfB5VovxyHjlNJ1nGOKplOhF-l9VsryQ1lGMQzYV3heBa8B0xZNtilGSSH4cig2I&usqp=CAU" alt="logo" />
                             </Flex>
                             <Text fontWeight={600} fontSize={"20px"}>
                                 Full-Stack Web Development (Full-Time)

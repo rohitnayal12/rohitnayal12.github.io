@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Styling for the project title */
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  color: #00FFFF; /* White or light color for the title */
+}
+
+/* Styling for the project tech stack */
+.project-tech-stack {
+  font-size: 1.1rem;
+  color: #08c1ef /* Light gray color for the tech stack */
+}
+
+/* Styling for the project description */
+.project-description {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  color: gray; /* Light gray color for the description */
+}
+
+/* Styling for the days to complete */
+.project-days-to-complete {
+  font-size: 1.1rem;
+  color: #3399ff; /* Another shade of light gray for days to complete */
+  margin-top: 2rem;
+}
