@@ -17,7 +17,7 @@ import { useEffect, useState } from "react";
 import { DiDatabase } from "react-icons/di";
 import { MdOutlineSyncProblem } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
-//import Resume from "../Components/Vivek-Jawale-Resume.pdf";
+
 
 const getData = async () => {
     const res = await fetch("https://api.github.com/users/rohitnayal12");
@@ -200,7 +200,6 @@ const Home = () => {
                                 {SkillArr.map((ele) => (<Badge
                                     px={2}
                                     py={1}
-                                    // bg={useColorModeValue("gray.50", "gray.800")}
                                     fontWeight={"400"}
                                 >
                                     {ele}
@@ -225,7 +224,7 @@ const Home = () => {
                                         target="_blank"
                                         rel="noreferrer"
                                         id="resume-button-2"
-                                        download="https://drive.google.com/file/d/1WoW_5ENmr8bnH1izNNUIXj-QXBVAlj8-/view?usp=sharing"
+                                        download="https://drive.google.com/file/d/1NM6PbNaT1HYZXiHwemP6vPtrMaXtMiEm/view?usp=sharing"
                                         onClick={onButtonClick}
                                     >
                                         Resume

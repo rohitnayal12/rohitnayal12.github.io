@@ -23,21 +23,16 @@ export default function Navbar(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
-  
-
-
-
- 
-
   function downloadResume() {
     var link = document.createElement("a");
-    link.href = "https://drive.google.com/file/d/1WoW_5ENmr8bnH1izNNUIXj-QXBVAlj8-/view?usp=sharing";
+    link.href =
+      "https://drive.google.com/file/d/1NM6PbNaT1HYZXiHwemP6vPtrMaXtMiEm/view?usp=sharing";
     link.download = "Rohit-Nayal-Resume.pdf";
     link.style.display = "none"; // Hide the link
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link); // Clean up
-}
+  }
 
   return (
     <>
@@ -92,35 +87,14 @@ export default function Navbar(props) {
               <a href="#contact" class="nav-link contact">
                 Contacts
               </a>
-              {/* <a
-                href={" "}
+
+              <a
+                href="#"
                 id="resume-button-1"
-                class="nav-link resume"
-                target="_blank"
-                rel="noreferrer"
-                download=""
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/file/d/12T-FecNZXpdlvb5Y4z2qpXgvzEF_EMSi/view"
-                  )
-                }
+                className="nav-link resume"
+                onclick={downloadResume}
               >
                 Resume
-              </a> */}
-              {/* <a
-                href="https://drive.google.com/uc?export=download&id=1WoW_5ENmr8bnH1izNNUIXj-QXBVAlj8-"
-                target="_blank"
-                rel="noreferrer"
-                download="your_resume.pdf"
-              >
-                Resume
-              </a> */}
-              {/* <a href="#" onclick={downloadResume}>
-                Resume
-              </a> */}
-              <a href="#" id="resume-button-1"
-                className="nav-link resume" onclick={downloadResume}>
-                 Resume
               </a>
             </HStack>
             <Box>
@@ -150,9 +124,12 @@ export default function Navbar(props) {
               </MenuButton>
               <MenuList>
                 <MenuItem>
-                 
-                  <a href="#" id="resume-button-1"
-                className="nav-link resume" onclick={downloadResume}>
+                  <a
+                    href="#"
+                    id="resume-button-1"
+                    className="nav-link resume"
+                    onclick={downloadResume}
+                  >
                     Resume
                   </a>
                 </MenuItem>
@@ -192,15 +169,14 @@ export default function Navbar(props) {
               <a href="#contact" onClick={onClose}>
                 Contacts
               </a>
-              {/* <a
-                href="https://drive.google.com/file/d/1WoW_5ENmr8bnH1izNNUIXj-QXBVAlj8-/view?usp=sharing"
-                download="Rohit-Nayal-Resume.pdf"
+
+              <a
+                href="#"
+                id="resume-button-1"
+                className="nav-link resume"
+                onclick={downloadResume}
               >
-                 Resume
-              </a> */}
-              <a href="#" id="resume-button-1"
-                className="nav-link resume" onclick={downloadResume}>
-                 Resume
+                Resume
               </a>
             </Stack>
           </Box>
