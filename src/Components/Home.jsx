@@ -224,7 +224,7 @@ const Home = () => {
                                         target="_blank"
                                         rel="noreferrer"
                                         id="resume-button-2"
-                                        download="https://drive.google.com/file/d/1NM6PbNaT1HYZXiHwemP6vPtrMaXtMiEm/view?usp=sharing"
+                                        download="https://drive.google.com/file/d/1I_sRKJeEhcfHOy_pm00utH5wsgC5FeMX/view?usp=sharing"
                                         onClick={onButtonClick}
                                     >
                                         Resume

@@ -26,7 +26,7 @@ export default function Navbar(props) {
   function downloadResume() {
     var link = document.createElement("a");
     link.href =
-      "https://drive.google.com/file/d/1NM6PbNaT1HYZXiHwemP6vPtrMaXtMiEm/view?usp=sharing";
+      "https://drive.google.com/file/d/1I_sRKJeEhcfHOy_pm00utH5wsgC5FeMX/view?usp=sharing";
     link.download = "Rohit-Nayal-Resume.pdf";
     link.style.display = "none"; // Hide the link
     document.body.appendChild(link);
