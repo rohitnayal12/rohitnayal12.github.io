@@ -60,7 +60,7 @@ const projects = [
 
 function Project() {
   return (
-    <Box id="projects" p={6} marginLeft="40px" marginRight="40px" >
+    <Box id="projects" p={6} style={{marginLeft:"20px", marginRight:"20px"}}  >
       <Text
         fontSize="4xl"
         fontWeight="bold"

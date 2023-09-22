@@ -12,7 +12,7 @@ import {
 const Education = () => {
   return (
     <>
-      <Box width="100%" m="auto" padding={["5", "5", "20"]}>
+      <Box width="100%" m="auto" padding={["5", "5", "0"]}>
         <Stack spacing={4} w={["100%"]} m="auto">
           <Text
             textTransform={"uppercase"}
