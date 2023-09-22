@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e8008e29.css",
-    "main.js": "/static/js/main.2ab1b261.js",
+    "main.js": "/static/js/main.e0f1e099.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/Buy-Fashion.png": "/static/media/Buy-Fashion.de4ba01f1185c57d54bc.png",
+    "static/media/BazarBuzz.png": "/static/media/BazarBuzz.9babd8b2e197ece5ab1b.png",
     "index.html": "/index.html",
     "main.e8008e29.css.map": "/static/css/main.e8008e29.css.map",
-    "main.2ab1b261.js.map": "/static/js/main.2ab1b261.js.map",
+    "main.e0f1e099.js.map": "/static/js/main.e0f1e099.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e8008e29.css",
-    "static/js/main.2ab1b261.js"
+    "static/js/main.e0f1e099.js"
   ]
 }
