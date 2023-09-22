@@ -1,9 +1,16 @@
-import { Box, Grid, Link, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Grid,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { Flex, Stat, StatLabel, StatNumber } from "@chakra-ui/react";
 import { BsPhoneFill } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import { MdEmail } from "react-icons/md";
-import { FaLinkedin ,FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const StatsCard = ({ title, stat, icon, id }) => {
   return (
@@ -96,7 +103,7 @@ const Contact = () => {
               target="_blank"
               id="contact-github"
               rel="noopener noreferrer"
-              _hover={{ textDecoration: 'none' }}
+              _hover={{ textDecoration: "none" }}
             >
               <StatsCard
                 title="Github"
@@ -111,7 +118,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               id="contact-linkedin"
-              _hover={{ textDecoration: 'none' }}
+              _hover={{ textDecoration: "none" }}
             >
               <StatsCard
                 title="LinkedIn"
@@ -120,7 +127,6 @@ const Contact = () => {
                 icon={<FaLinkedin size="3em" />}
               />
             </Link>
-            
           </Grid>
         </Box>
       </Box>

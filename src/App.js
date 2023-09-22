@@ -8,6 +8,7 @@ import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
 import Projects from "./Components/Projects";
 import Techstack from "./Components/TechStack";
+import Techtool from "./Components/TechTools";
 // import Techstack from "./Components/TechStack";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Education />
       <Projects id="projects"  />
       <Techstack  />
+      <Techtool/>
       <Github />
       
       <Contact  id="contact"/>

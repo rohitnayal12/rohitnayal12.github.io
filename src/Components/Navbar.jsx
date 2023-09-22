@@ -17,22 +17,27 @@ import {
 } from "@chakra-ui/react";
 import { BsSun, BsMoonStarsFill } from "react-icons/bs";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-// import Resume from "../Components/Vivek-Jawale-Resume.pdf";
+import download from "downloadjs";
 
 export default function Navbar(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
-  function downloadResume() {
-    var link = document.createElement("a");
-    link.href =
-      "https://drive.google.com/file/d/1I_sRKJeEhcfHOy_pm00utH5wsgC5FeMX/view?usp=sharing";
-    link.download = "Rohit-Nayal-Resume.pdf";
-    link.style.display = "none"; // Hide the link
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link); // Clean up
-  }
+  const onButtonClick = async () => {
+    try {
+      const link = document.createElement("a");
+      link.href =
+        "https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing";
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.click();
+      download(
+        "https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing",'application/pdf'
+      );
+    } catch (error) {
+      console.error("An error occurred ", error);
+    }
+  };
 
   return (
     <>
@@ -89,10 +94,11 @@ export default function Navbar(props) {
               </a>
 
               <a
-                href="#"
+                href={""}
+                target="_blank"
+                rel="noreferrer"
                 id="resume-button-1"
-                className="nav-link resume"
-                onclick={downloadResume}
+                onClick={onButtonClick}
               >
                 Resume
               </a>
@@ -128,7 +134,7 @@ export default function Navbar(props) {
                     href="#"
                     id="resume-button-1"
                     className="nav-link resume"
-                    onclick={downloadResume}
+                    onclick={onButtonClick}
                   >
                     Resume
                   </a>
@@ -174,7 +180,7 @@ export default function Navbar(props) {
                 href="#"
                 id="resume-button-1"
                 className="nav-link resume"
-                onclick={downloadResume}
+                onclick={onButtonClick}
               >
                 Resume
               </a>

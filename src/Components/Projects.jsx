@@ -12,73 +12,86 @@ import {
   grid,
   textDecoration,
 } from "@chakra-ui/react";
-
+import img1 from "../images/Buy-Fashion.png"
+import img2 from "../images/BazarBuzz.png"
 const projects = [
   {
-    title: "ByFashion.com",
-    githubLink: "https://github.com/Biswajit2595/warlike-current-5989",
+    title: "UPSTYLE.com",
+    githubLink: "https://github.com/rohitnayal12/UpStyle",
     liveLink: "https://upstylenew.netlify.app/",
-    image: "images/Screenshot(1395).png",
-    techStack: "HTML, CSS, Javascript",
+    image: "https://github.com/Biswajit2595/warlike-current-5989/assets/119488668/844e8624-7f60-42da-a24d-1837eabfc5c5",
+    techStack: "HTML, CSS, Javascript,typescript",
     description:
       "This project is a full stack application which focuses on e-commerce for men and women products. You can buy different products as per your body needs by exploring our website!",
     daysToComplete: 5,
   },
   {
-    title: "UPSTYLE.com",
-    image: "images/Screenshot(1395).png",
-    githubLink: "https://github.com/Biswajit2595/warlike-current-5989",
-    liveLink: "https://upstylenew.netlify.app/",
-    techStack: "React,TypeScript,HTML,CSS",
+    title: "TuneWave",
+    image: "https://github.com/WDwithSuraj/shocking-grade-9442/assets/119648587/2bf5132e-c63f-4888-a817-f9fafd5ae748",
+    githubLink: "https://github.com/rohitnayal12/Tune-Waves",
+    liveLink: "https://tunewaves.vercel.app/",
+    techStack: "React,Express,Node,MongoDB,JavaScript,HTML,CSS",
     description:
-      "This project is a full stack application which focuses on e-commerce for men and women products. You can buy different products as per your body needs by exploring our website!",
+      "TuneWaves is not just a music platform, it's your portal to a world of limitless audio exploration. Hear the music and make your time special.",
     daysToComplete: 5,
   },
   {
-    title: "UPSTYLE.com",
-    image: "images/Screenshot(1395).png",
-    githubLink: "https://github.com/Biswajit2595/warlike-current-5989",
-    liveLink: "https://upstylenew.netlify.app/",
-    techStack: "HTML, CSS, Javascript",
+    title: "Buy-Fashion.com",
+
+    image:  img1,
+    githubLink: "https://github.com/rohitnayal12/Buy-Fashion",
+    liveLink: "https://fastidious-melba-d436e9.netlify.app/",
+    techStack: "HTML, CSS, Javascript,Json-Server",
     description:
-      "This project is a full stack application which focuses on e-commerce for men and women products. You can buy different products as per your body needs by exploring our website!",
+      "C. & J. Clark International Ltd, doing business as Clarks, is a British international shoe manufacturer and retailer. It was founded in 1825 by Cyrus Clark.You can buy different shoe products as per your needs by exploring our website!",
     daysToComplete: 5,
   },
   {
-    title: "UPSTYLE.com",
-    image: "images/Screenshot(1395).png",
-    githubLink: "https://github.com/Biswajit2595/warlike-current-5989",
-    liveLink: "https://upstylenew.netlify.app/",
-    techStack: "HTML, CSS, Javascript",
+    title: "BazarBuzz",
+    image: img2,
+    githubLink: "https://github.com/rohitnayal12/BazarBuzz",
+    liveLink: "https://curly-hobbies-5555.netlify.app/",
+    techStack: "HTML, CSS, Javascript,Json-Server",
     description:
-      "This project is a full stack application which focuses on e-commerce for men and women products. You can buy different products as per your body needs by exploring our website!",
+      "This project is a e-commerce application which focuses on different daily needs and  men and women products. You can buy different products as per your home needs by exploring our website!",
     daysToComplete: 5,
   },
 ];
 
 function Project() {
   return (
-    <Box id="projects" p={6} marginLeft="40px" marginRight="40px">
-      <Text fontSize="4xl" fontWeight="bold" color="#FFA500" mb={4} textAlign={"center"}>
+    <Box id="projects" p={6} marginLeft="40px" marginRight="40px" >
+      <Text
+        fontSize="4xl"
+        fontWeight="bold"
+        color="#FFA500"
+        mb={4}
+        textAlign={"center"}
+      >
         My Projects
       </Text>
-      <br/>
-      <Grid templateColumns="repeat(2, 1fr)" gap={6} className="project-card">
+      <br />
+      <Grid gridTemplateColumns={[
+             "repeat(1, 1fr)",
+             "repeat(1, 1fr)",
+             "repeat(1, 1fr)",
+              "repeat(2, 1fr)",
+            
+            // "repeat(4,1fr)",
+    
+          ]} gap={6} className="project-card" >
         {projects.map((project, index) => (
-          <GridItem key={index} className="project-card">
+          <GridItem key={index} className="project-card"  style ={{"box-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px",paddingLeft:"40px",paddingRight:"40px",paddingTop:"5px",paddingBottom:"5px",borderRadius:"20px"}} >
             <HStack spacing="30%">
               <Link
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                
                 class="project-github-link"
-                
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="4vh"
-                 
                   style={{ color: "#00FFFF" }}
                   viewBox="0 0 16 16"
                 >
@@ -100,7 +113,6 @@ function Project() {
                   borderRadius="md"
                   p={2}
                   w="15vh"
-                 
                 >
                   <Text fontSize="xl" fontWeight="bold" color="blue.500">
                     Go Live
@@ -110,12 +122,13 @@ function Project() {
             </HStack>
             <br />
             <Image
-              src={require("../images/Screenshot (1395).png")}
+              // src={require("../images/Screenshot(1531).png")}
+              src={project.image}
               alt={project.title}
               borderRadius="md"
             />
             <Text className="project-title">{project.title}</Text>
-            <br/>
+            <br />
             <Text className="project-tech-stack">{project.techStack}</Text>
             <Text className="project-description">{project.description}</Text>
             <Text className="project-days-to-complete">
@@ -125,13 +138,6 @@ function Project() {
         ))}
       </Grid>
     </Box>
-
-
-
-
-   
-
-
   );
 }
 
