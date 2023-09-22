@@ -64,21 +64,23 @@ const Home = () => {
       console.log(err);
     }
   };
+ 
 
   const onButtonClick = async () => {
-    try {
+   
+
+    window.open("https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing", "_blank");
+
+    // Trigger the download after a short delay (e.g., 500 milliseconds)
+    setTimeout(() => {
       const link = document.createElement("a");
-      link.href =
-        "https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing";
-      link.target = "_blank";
-      link.rel = "noopener";
+      link.href = "https://drive.google.com/uc?export=download&id=1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq";
+      link.download = "https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing"; // Set the desired file name here
+      link.style.display = "none";
+      document.body.appendChild(link);
       link.click();
-      download(
-        "https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing",'application/pdf'
-      );
-    } catch (error) {
-      console.error("An error occurred ", error);
-    }
+      document.body.removeChild(link);
+    }, 200); // Adjust the delay as needed
   };
 
   return (
@@ -221,17 +223,12 @@ const Home = () => {
                   _focus={{
                     bg: "gray.200",
                   }}
-                  id="resume-link-2"
+                  onClick={onButtonClick}
+                  id="resume-button-2"
                 >
-                  <a
-                    href={""}
-                    target="_blank"
-                    rel="noreferrer"
-                    id="resume-button-2"
-                    onClick={onButtonClick}
-                  >
+                 
                     Resume
-                  </a>
+                 
                 </Button>
 
                 <Button
