@@ -1,12 +1,9 @@
 import { Box, Grid, Stack, Text, useColorModeValue } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import {
- 
   SiGithub,
-  
   SiMongodb,
-  SiMongoose,
- SiVisualstudiocode,
+  SiVisualstudiocode,
   SiGit,
   SiRender,
   SiNetlify,
@@ -15,13 +12,11 @@ import {
   SiCodepen,
   SiCodesandbox,
   SiNpm,
-  
-  SiBootstrap,
-  SiTailwindcss,
   SiVercel,
 } from "react-icons/si";
 
 const Techtool = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div id="skills">
       <Box
@@ -47,6 +42,11 @@ const Techtool = () => {
             p={2}
             alignSelf={"flex-start"}
             rounded={"md"}
+            _hover={{
+              transform: isHovered ? "scale(1.2)" : "scale(1)",
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
             Tech Tools
           </Text>
@@ -59,22 +59,14 @@ const Techtool = () => {
             "repeat(2, 1fr)",
             "repeat(2, 1fr)",
             "repeat(3,1fr)",
-             "repeat(4,1fr)",
-             "repeat(4,1fr)",
+            "repeat(4,1fr)",
+            "repeat(4,1fr)",
             "repeat(6,1fr)",
           ]}
           alignItems="center"
           gap={12}
           justifyContent="center"
         >
-          
-
-         
-
-
-       
-
-
           <Box
             border={"1px solid gray"}
             boxShadow="rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
@@ -87,6 +79,11 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiGit size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -106,6 +103,11 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiGithub size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -124,6 +126,11 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiVisualstudiocode size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -143,15 +150,17 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiMongodb size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
               MongoDB
             </Text>
           </Box>
-
-          
-         
 
           <Box
             border={"1px solid gray"}
@@ -165,6 +174,11 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiPostman size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -183,6 +197,11 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiNpm size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -190,7 +209,6 @@ const Techtool = () => {
             </Text>
           </Box>
 
-          
           <Box
             border={"1px solid gray"}
             boxShadow="rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
@@ -203,6 +221,11 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiNetlify size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -222,6 +245,11 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiVercel size="50px" class="skills-card-img" />
             <Text mt={2} class="skills-card-name">
@@ -240,10 +268,15 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiRender size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
-             Render
+              Render
             </Text>
           </Box>
           <Box
@@ -258,6 +291,11 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiCodepen size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -276,13 +314,18 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiCodesandbox size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
               CodesandBox
             </Text>
           </Box>
-         
+
           <Box
             border={"1px solid gray"}
             boxShadow="rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
@@ -295,6 +338,11 @@ const Techtool = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiSlack size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">

@@ -1,25 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
-  Center,
   Grid,
   GridItem,
   HStack,
   Image,
   Link,
-  Stack,
   Text,
-  grid,
-  textDecoration,
 } from "@chakra-ui/react";
-import img1 from "../images/Buy-Fashion.png"
-import img2 from "../images/BazarBuzz.png"
+import img1 from "../images/Buy-Fashion.png";
+import img2 from "../images/BazarBuzz.png";
 const projects = [
   {
     title: "UPSTYLE.com",
     githubLink: "https://github.com/rohitnayal12/UpStyle",
     liveLink: "https://upstylenew.netlify.app/",
-    image: "https://github.com/Biswajit2595/warlike-current-5989/assets/119488668/844e8624-7f60-42da-a24d-1837eabfc5c5",
+    image:
+      "https://github.com/Biswajit2595/warlike-current-5989/assets/119488668/844e8624-7f60-42da-a24d-1837eabfc5c5",
     techStack: "HTML, CSS, Javascript,typescript",
     description:
       "This project is a full stack application which focuses on e-commerce for men and women products. You can buy different products as per your body needs by exploring our website!",
@@ -27,7 +24,8 @@ const projects = [
   },
   {
     title: "TuneWave",
-    image: "https://github.com/WDwithSuraj/shocking-grade-9442/assets/119648587/2bf5132e-c63f-4888-a817-f9fafd5ae748",
+    image:
+      "https://github.com/WDwithSuraj/shocking-grade-9442/assets/119648587/2bf5132e-c63f-4888-a817-f9fafd5ae748",
     githubLink: "https://github.com/rohitnayal12/Tune-Waves",
     liveLink: "https://tunewaves.vercel.app/",
     techStack: "React,Express,Node,MongoDB,JavaScript,HTML,CSS",
@@ -38,12 +36,12 @@ const projects = [
   {
     title: "Buy-Fashion.com",
 
-    image:  img1,
+    image: img1,
     githubLink: "https://github.com/rohitnayal12/Buy-Fashion",
     liveLink: "https://fastidious-melba-d436e9.netlify.app/",
     techStack: "HTML, CSS, Javascript,Json-Server",
     description:
-      "C. & J. Clark International Ltd, doing business as Clarks, is a British international shoe manufacturer and retailer. It was founded in 1825 by Cyrus Clark.You can buy different shoe products as per your needs by exploring our website!",
+      "Buy-fashion is your canvas to explore foot wares according to your choice. Immerse yourself in the rhythms of the world, uncover hidden gems, and craft your foot ware journey like never before",
     daysToComplete: 5,
   },
   {
@@ -59,41 +57,73 @@ const projects = [
 ];
 
 function Project() {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <Box id="projects" p={6} style={{marginLeft:"20px", marginRight:"20px"}}  >
+    <Box
+      id="projects"
+      p={6}
+      style={{ marginLeft: "20px", marginRight: "20px" }}
+    >
       <Text
         fontSize="4xl"
         fontWeight="bold"
-        color="#FFA500"
+        color="teal"
         mb={4}
         textAlign={"center"}
+        _hover={{
+          transform: isHovered ? "scale(1.2)" : "scale(1)",
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        My Projects
+        PROJECTS
       </Text>
       <br />
-      <Grid gridTemplateColumns={[
-             "repeat(1, 1fr)",
-             "repeat(1, 1fr)",
-             "repeat(1, 1fr)",
-              "repeat(2, 1fr)",
-            
-            // "repeat(4,1fr)",
-    
-          ]} gap={6} className="project-card" >
+      <Grid
+        gridTemplateColumns={[
+          "repeat(1, 1fr)",
+          "repeat(1, 1fr)",
+          "repeat(1, 1fr)",
+          "repeat(2, 1fr)",
+
+          // "repeat(4,1fr)",
+        ]}
+        gap={6}
+        className="project-card"
+      >
         {projects.map((project, index) => (
-          <GridItem key={index} className="project-card"  style ={{"box-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px",paddingLeft:"40px",paddingRight:"40px",paddingTop:"5px",paddingBottom:"5px",borderRadius:"20px"}} >
-            <HStack spacing="30%">
+          <GridItem
+            key={index}
+            className="project-card"
+            style={{
+              "box-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+              paddingLeft: "40px",
+              paddingRight: "40px",
+              paddingTop: "5px",
+              paddingBottom: "5px",
+              borderRadius: "20px",
+            }}
+          >
+            <HStack
+              spacing="30%"
+              display={"flex"}
+              justifyContent={"space-evenly"}
+            >
               <Link
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="project-github-link"
+                _hover={{ textDecoration: "none" }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="4vh"
                   style={{ color: "#00FFFF" }}
                   viewBox="0 0 16 16"
+                  _hover={{
+                    transform: isHovered ? "scale(1.1)" : "scale(1)",
+                  }}
                 >
                   <path
                     fill="#3399ff"
@@ -104,6 +134,8 @@ function Project() {
               <Link
                 href={project.liveLink}
                 target="_blank"
+                alignItems={"center"}
+                textAlign={"center"}
                 rel="noopener noreferrer"
                 className="project-deployed-link"
                 _hover={{ textDecoration: "none" }}
@@ -113,6 +145,7 @@ function Project() {
                   borderRadius="md"
                   p={2}
                   w="15vh"
+                  _hover={{ backgroundColor: "blue", color: "black" }}
                 >
                   <Text fontSize="xl" fontWeight="bold" color="blue.500">
                     Go Live
@@ -121,12 +154,20 @@ function Project() {
               </Link>
             </HStack>
             <br />
-            <Image
-              // src={require("../images/Screenshot(1531).png")}
-              src={project.image}
-              alt={project.title}
-              borderRadius="md"
-            />
+            <Box
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <Image
+                src={project.image}
+                alt={project.title}
+                borderRadius="md"
+                transition="transform 0.3s ease-in-out"
+                _hover={{
+                  transform: isHovered ? "scale(1.1)" : "scale(1)",
+                }}
+              />
+            </Box>
             <Text className="project-title">{project.title}</Text>
             <br />
             <Text className="project-tech-stack">{project.techStack}</Text>

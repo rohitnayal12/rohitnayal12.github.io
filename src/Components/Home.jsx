@@ -17,7 +17,6 @@ import { useEffect, useState } from "react";
 import { DiDatabase } from "react-icons/di";
 import { MdOutlineSyncProblem } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
-import download from "downloadjs";
 
 const getData = async () => {
   const res = await fetch("https://api.github.com/users/rohitnayal12");
@@ -44,6 +43,7 @@ const Feature = ({ text, icon, iconBg }) => {
 
 const Home = () => {
   const [result, setResult] = useState({});
+  const [isHovered, setIsHovered] = useState(false);
   const SkillArr = [
     "JAVASCRIPT",
     "REACT",
@@ -64,18 +64,20 @@ const Home = () => {
       console.log(err);
     }
   };
- 
 
   const onButtonClick = async () => {
-   
-
-    window.open("https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing", "_blank");
+    window.open(
+      "https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing",
+      "_blank"
+    );
 
     // Trigger the download after a short delay (e.g., 500 milliseconds)
     setTimeout(() => {
       const link = document.createElement("a");
-      link.href = "https://drive.google.com/uc?export=download&id=1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq";
-      link.download = "https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing"; // Set the desired file name here
+      link.href =
+        "https://drive.google.com/uc?export=download&id=1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq";
+      link.download =
+        "https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing"; // Set the desired file name here
       link.style.display = "none";
       document.body.appendChild(link);
       link.click();
@@ -103,11 +105,42 @@ const Home = () => {
             p={2}
             alignSelf={"flex-start"}
             rounded={"md"}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.10)" : "scale(1)",
+              color: "teal.500", // Change font color to teal on hover
+              backgroundColor: "transparent", // Remove background color on hover
+            }}
           >
             A MERN Stack Developer
           </Text>
-          <Heading id="user-detail-name">Hi, I'm Rohit Nayal</Heading>
-          <Text id="user-detail-intro" color={"gray.500"} fontSize={"lg"}>
+          <Box>
+            <Heading
+              id="user-detail-name"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              _hover={{
+                transform: isHovered ? "scale(1.10)" : "scale(1)",
+                color: "teal.500", // Change font color to teal on hover
+                backgroundColor: "transparent", // Remove background color on hover
+              }}
+            >
+              Hi, I'm Rohit Nayal
+            </Heading>
+          </Box>
+          <Text
+            id="user-detail-intro"
+            color={"gray.500"}
+            fontSize={"lg"}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.10)" : "scale(1)",
+              color: "teal.500", // Change font color to teal on hover
+              backgroundColor: "transparent", // Remove background color on hover
+            }}
+          >
             A highly motivated and adaptable individual with a passion for
             implementing technical and logical skills in the creative domain.
             Specializes in quickly learning new skills and tech stacks,
@@ -163,6 +196,13 @@ const Home = () => {
               height="auto"
               paddingTop={8}
               paddingBottom={16}
+              _hover={{
+                transform: isHovered ? "scale(1.1)" : "scale(1)",
+                backgroundColor: "teal.500", // Change background color to teal on hover
+                color: "white", // Change font color to white on hover
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               <Avatar
                 className="home-img"
@@ -191,7 +231,7 @@ const Home = () => {
               </Text>
               <Text
                 textAlign={"center"}
-                color={useColorModeValue("gray.700", "gray.400")}
+                color={useColorModeValue("gray.700", "white")}
                 px={3}
               >
                 {result.bio}
@@ -217,18 +257,16 @@ const Home = () => {
                   flex={1}
                   fontSize={"sm"}
                   variant="outline"
-                  color={"white.400"}
-                  bg={useColorModeValue("blue.50", "blue.900")}
+                  color={"white"}
+                  bg={useColorModeValue("blue.900", "blue.900")}
                   rounded={"full"}
                   _focus={{
-                    bg: "gray.200",
+                    bg: "blue.900",
                   }}
                   onClick={onButtonClick}
                   id="resume-button-2"
                 >
-                 
-                    Resume
-                 
+                  Resume
                 </Button>
 
                 <Button

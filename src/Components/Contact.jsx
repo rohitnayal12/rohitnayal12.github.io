@@ -11,6 +11,7 @@ import { BsPhoneFill } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { useState } from "react";
 
 const StatsCard = ({ title, stat, icon, id }) => {
   return (
@@ -45,6 +46,7 @@ const StatsCard = ({ title, stat, icon, id }) => {
 };
 
 const Contact = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div id="contact">
       <Box maxW={"7xl"} m="auto" mb={8} padding="20px" alignItems="center">
@@ -64,6 +66,11 @@ const Contact = () => {
             p={2}
             alignSelf={"flex-start"}
             rounded={"md"}
+            _hover={{
+              transform: isHovered ? "scale(1.2)" : "scale(1)",
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
             Connect With Rohit
           </Text>
@@ -103,7 +110,11 @@ const Contact = () => {
               target="_blank"
               id="contact-github"
               rel="noopener noreferrer"
-              _hover={{ textDecoration: "none" }}
+              _hover={{
+                transform: isHovered ? "scale(1.1)" : "scale(1)",
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               <StatsCard
                 title="Github"
@@ -118,7 +129,11 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               id="contact-linkedin"
-              _hover={{ textDecoration: "none" }}
+              _hover={{
+                transform: isHovered ? "scale(1.1)" : "scale(1)",
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               <StatsCard
                 title="LinkedIn"

@@ -1,30 +1,21 @@
 import { Box, Grid, Stack, Text, useColorModeValue } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import {
   SiChakraui,
   SiCss3,
   SiExpress,
-  SiGithub,
   SiHtml5,
   SiJavascript,
-  SiMongodb,
-  SiNextdotjs,
-  
   SiReactrouter,
   SiNodedotjs,
   SiReact,
   SiTypescript,
   SiRedux,
- SiStyledcomponents,
-  SiGit,
-  SiPostman,
-  SiSlack,
-  SiBootstrap,
-  SiTailwindcss,
-  SiVercel,
+  SiStyledcomponents,
 } from "react-icons/si";
 
 const Techstack = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div id="skills">
       <Box
@@ -50,6 +41,11 @@ const Techstack = () => {
             p={2}
             alignSelf={"flex-start"}
             rounded={"md"}
+            _hover={{
+              transform: isHovered ? "scale(1.2)" : "scale(1)",
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
             Tech Skills
           </Text>
@@ -62,12 +58,12 @@ const Techstack = () => {
             "repeat(2, 1fr)",
             "repeat(2, 1fr)",
             "repeat(3,1fr)",
-             "repeat(4,1fr)",
-             "repeat(4,1fr)",
+            "repeat(4,1fr)",
+            "repeat(4,1fr)",
             "repeat(6,1fr)",
           ]}
           alignItems="center"
-          gap={15}
+          gap={15.5}
           justifyContent="center"
         >
           <Box
@@ -82,6 +78,11 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiHtml5 size="50px" class="skills-card-img" />
             <Text mt={2} class="skills-card-name">
@@ -101,6 +102,11 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiCss3 size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -120,6 +126,11 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiJavascript size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -139,6 +150,11 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiReact size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -158,6 +174,11 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiRedux size="50px" className="skills-card-img" />
             <Text mt={2} class="skills-card-name">
@@ -176,6 +197,11 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiReactrouter size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -195,6 +221,11 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiChakraui size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -214,6 +245,11 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiTypescript size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -221,7 +257,6 @@ const Techstack = () => {
             </Text>
           </Box>
 
-          
           <Box
             border={"1px solid gray"}
             boxShadow="rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
@@ -234,14 +269,18 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiExpress size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
-             Express
+              Express
             </Text>
           </Box>
 
-          
           <Box
             border={"1px solid gray"}
             boxShadow="rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
@@ -254,6 +293,11 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiNodedotjs size="50px" className="skills-card-img" />
             <Text mt={2} className="skills-card-name">
@@ -272,23 +316,17 @@ const Techstack = () => {
             flexDirection="column"
             alignItems={"center"}
             className="skills-card"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            _hover={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           >
             <SiStyledcomponents size="50px" class="skills-card-img" />
             <Text mt={2} class="skills-card-name">
-             StyleComponent
+              StyleComponent
             </Text>
           </Box>
-
-          
-          
-
-
-
-        
-          
-
-         
-        
         </Grid>
       </Box>
     </div>

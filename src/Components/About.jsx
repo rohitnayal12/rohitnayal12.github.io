@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Flex,
@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 const About = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div id="about" className="about section">
       <Box maxW={"7xl"} m="auto" paddingTop={["8", "8", "20"]} mb={8}>
@@ -33,6 +34,11 @@ const About = () => {
               boxShadow="rgba(0, 0, 0, 0.2) 0px 20px 30px"
               src="https://avatars.githubusercontent.com/u/119488668?v=4"
               alt="img"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              _hover={{
+                transform: isHovered ? "scale(1.1)" : "scale(1)",
+              }}
             />
           </Box>
           <Box w={["85%", "85%", "70%"]} m="auto">
@@ -47,10 +53,26 @@ const About = () => {
                 p={2}
                 alignSelf={"flex-start"}
                 rounded={"md"}
+                _hover={{
+                  transform: isHovered ? "scale(1.2)" : "scale(1)",
+                }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
               >
                 About Rohit Nayal
               </Text>
-              <Text color={"gray.500"} fontSize={"lg"} id="user-detail-intro">
+              <Text
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                _hover={{
+                  transform: isHovered ? "scale(1.10)" : "scale(1)",
+                  color: "teal.500", // Change font color to teal on hover
+                  backgroundColor: "transparent", // Remove background color on hover
+                }}
+                color={"gray.500"}
+                fontSize={"lg"}
+                id="user-detail-intro"
+              >
                 I am an MERN Full Stack Developer with a strong understanding of
                 Web Development and exceptional problem-solving skills in HTML,
                 CSS, JavaScript, React and Redux. . Currently, I am seeking a

@@ -6,10 +6,11 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import Githubcalendar from "react-github-calendar";
 
 const Github = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <>
       <Box maxW={"7xl"} m="auto" mb={8} padding="20px" alignItems="center">
@@ -28,6 +29,11 @@ const Github = () => {
             p={2}
             alignSelf={"flex-start"}
             rounded={"md"}
+            _hover={{
+              transform: isHovered ? "scale(1.2)" : "scale(1)",
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
             Github Calander
           </Text>
@@ -37,6 +43,11 @@ const Github = () => {
           style={{ width: "100%", margin: "auto" }}
           blockMargin={5}
           fontSize={16}
+          _hover={{
+            transform: isHovered ? "scale(1.1)" : "scale(1)",
+          }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         />
         <Stack spacing={4} w={["100%"]} m="auto">
           <Text
@@ -54,6 +65,11 @@ const Github = () => {
             p={2}
             alignSelf={"flex-start"}
             rounded={"md"}
+            _hover={{
+              transform: isHovered ? "scale(1.2)" : "scale(1)",
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
             Github Stats
           </Text>

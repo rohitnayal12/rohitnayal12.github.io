@@ -1,6 +1,5 @@
 import {
   Box,
-  SimpleGrid,
   Text,
   Stack,
   Flex,
@@ -8,8 +7,10 @@ import {
   Image,
   Grid,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
 const Education = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <>
       <Box width="100%" m="auto" padding={["5", "5", "0"]}>
@@ -24,6 +25,11 @@ const Education = () => {
             p={2}
             alignSelf={"center"}
             rounded={"md"}
+            _hover={{
+              transform: isHovered ? "scale(1.2)" : "scale(1)",
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
             Education
           </Text>
@@ -31,24 +37,38 @@ const Education = () => {
         <Box p={4} mt={8} width="100%">
           {/* <SimpleGrid columns={{ base: 1, md: 3 }} spacing={20}> */}
           <Grid
-          maxW={"5xl"}
-          m="auto"
-          gridTemplateColumns={[
-             "repeat(1, 1fr)",
-             "repeat(1, 1fr)",
-             "repeat(2, 1fr)",
-            "repeat(2, 1fr)",
-            
-            // "repeat(4,1fr)",
-    
-          ]}
-          alignItems="center"
-          gap={12}
-          justifyContent="center"
-          
-        >
+            maxW={"5xl"}
+            m="auto"
+            gridTemplateColumns={[
+              "repeat(1, 1fr)",
+              "repeat(1, 1fr)",
+              "repeat(2, 1fr)",
+              "repeat(2, 1fr)",
 
-            <Stack style ={{"box-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px",paddingLeft:"40px",paddingRight:"40px",paddingTop:"40px",paddingBottom:"40px",borderRadius:"10px"}}>
+              // "repeat(4,1fr)",
+            ]}
+            alignItems="center"
+            gap={20}
+            justifyContent="center"
+          >
+            <Stack
+              style={{
+                boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                paddingLeft: "40px",
+                paddingRight: "40px",
+                paddingTop: "50px",
+                paddingBottom: "45px",
+                borderRadius: "10px",
+                transition: "background-color 0.3s, color 0.3s", // Add transition for smooth effect
+              }}
+              _hover={{
+                transform: isHovered ? "scale(1.1)" : "scale(1)",
+                backgroundColor: "teal.500", // Change background color to teal on hover
+                color: "white", // Change font color to white on hover
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <Flex
                 w={16}
                 h={16}
@@ -79,7 +99,24 @@ const Education = () => {
                 at Masai School.
               </Text>
             </Stack>
-            <Stack style ={{"box-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px",paddingLeft:"40px",paddingRight:"40px",paddingTop:"25px",paddingBottom:"25px",borderRadius:"10px"}}>
+            <Stack
+              style={{
+                boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                paddingLeft: "40px",
+                paddingRight: "40px",
+                paddingTop: "40px",
+                paddingBottom: "30px",
+                borderRadius: "10px",
+                transition: "background-color 0.3s, color 0.3s", // Add transition for smooth effect
+              }}
+              _hover={{
+                transform: isHovered ? "scale(1.1)" : "scale(1)",
+                backgroundColor: "teal.500", // Change background color to teal on hover
+                color: "white", // Change font color to white on hover
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <Flex
                 w={16}
                 h={16}
@@ -108,7 +145,24 @@ const Education = () => {
                 I completed my Bachelor Degree in Mechanical Engineering.
               </Text>
             </Stack>
-            <Stack style ={{"box-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px",paddingLeft:"40px",paddingRight:"35px",paddingTop:"30px",paddingBottom:"30px",borderRadius:"10px"}}>
+            <Stack
+              style={{
+                boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                paddingLeft: "40px",
+                paddingRight: "40px",
+                paddingTop: "40px",
+                paddingBottom: "30px",
+                borderRadius: "10px",
+                transition: "background-color 0.3s, color 0.3s", // Add transition for smooth effect
+              }}
+              _hover={{
+                transform: isHovered ? "scale(1.1)" : "scale(1)",
+                backgroundColor: "teal.500", // Change background color to teal on hover
+                color: "white", // Change font color to white on hover
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <Flex
                 w={16}
                 h={16}
@@ -134,14 +188,30 @@ const Education = () => {
               <Text fontWeight={100} fontSize={"15px"}>
                 2014 - 2017
               </Text>
-              <br/>
+              <br />
               <Text color={"white.100"} fontWeight={400} fontSize={"17px"}>
                 I completed my diploma in Mechanical Engineering.
               </Text>
             </Stack>
 
-
-            <Stack style ={{"box-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px",paddingLeft:"40px",paddingRight:"40px",paddingTop:"40px",paddingBottom:"30px",borderRadius:"10px"}}>
+            <Stack
+              style={{
+                boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                paddingLeft: "40px",
+                paddingRight: "40px",
+                paddingTop: "40px",
+                paddingBottom: "40px",
+                borderRadius: "10px",
+                transition: "background-color 0.3s, color 0.3s", // Add transition for smooth effect
+              }}
+              _hover={{
+                transform: isHovered ? "scale(1.1)" : "scale(1)",
+                backgroundColor: "teal.500", // Change background color to teal on hover
+                color: "white", // Change font color to white on hover
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <Flex
                 w={16}
                 h={16}
@@ -173,7 +243,7 @@ const Education = () => {
                 group.
               </Text>
             </Stack>
-            </Grid>
+          </Grid>
           {/* </SimpleGrid> */}
         </Box>
       </Box>
