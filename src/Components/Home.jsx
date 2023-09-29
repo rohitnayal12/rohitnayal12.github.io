@@ -231,7 +231,7 @@ const Home = () => {
               </Text>
               <Text
                 textAlign={"center"}
-                color={useColorModeValue("gray.700", "white")}
+                color={useColorModeValue("gray.600", "white")}
                 px={3}
               >
                 {result.bio}
