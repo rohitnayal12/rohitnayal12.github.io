@@ -14,20 +14,20 @@ import Techtool from "./Components/TechTools";
 const App = () => {
   return (
     <>
-      <Navbar  id="nav-menu" />
+      <Navbar id="nav-menu" />
       <Home id="home" />
       <About id="about" class="about section" />
       <Education />
-      <Projects id="projects"  />
-      <Techstack  />
-      <Techtool/>
+      <Projects id="projects" />
+      <Techstack />
+      <Techtool />
       <Github />
-      
-      <Contact  id="contact"/>
+
+      <Contact id="contact" />
 
       <Footer />
     </>
   );
-}
+};
 
 export default App;

@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import { DiDatabase } from "react-icons/di";
 import { MdOutlineSyncProblem } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
+import { TypeAnimation } from "react-type-animation";
 
 const getData = async () => {
   const res = await fetch("https://api.github.com/users/rohitnayal12");
@@ -116,38 +117,31 @@ const Home = () => {
             A MERN Stack Developer
           </Text>
           <Box>
-            <Heading
-              id="user-detail-name"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              _hover={{
-                transform: isHovered ? "scale(1.10)" : "scale(1)",
-                color: "teal.500", // Change font color to teal on hover
-                backgroundColor: "transparent", // Remove background color on hover
-              }}
-            >
-              Hi, I'm Rohit Nayal
-            </Heading>
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed once, initially
+                "Hi, I am Rohit Nayal",
+                3000,
+                "",
+              ]}
+              omitDeletionAnimation={true}
+              speed={50}
+              style={{ fontSize: "3em" }}
+              repeat={Infinity}
+            />
           </Box>
-          <Text
-            id="user-detail-intro"
-            color={"gray.500"}
-            fontSize={"lg"}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            _hover={{
-              transform: isHovered ? "scale(1.10)" : "scale(1)",
-              color: "teal.500", // Change font color to teal on hover
-              backgroundColor: "transparent", // Remove background color on hover
-            }}
-          >
-            A highly motivated and adaptable individual with a passion for
-            implementing technical and logical skills in the creative domain.
-            Specializes in quickly learning new skills and tech stacks,
-            problem-solving, responsive design principles, and teamwork. Aspires
-            to build a career in an organization with dedicated people that
-            aligns with their career goals.
-          </Text>
+
+          <TypeAnimation
+            splitter={(str) => str.split(/(?= )/)} 
+            sequence={[
+              "A highly motivated and adaptable individual with a passion for implementing technical and logical skills in the creative domain. Specializes in quickly learning new skills and tech stacks,problem-solving, responsive design principles, and teamwork. Aspires to build a career in an organization with dedicated people that aligns with their career goals.",
+              3000,
+            ]}
+            speed={{ type: "keyStrokeDelayInMs", value: 90 }}
+            omitDeletionAnimation={true}
+            style={{ fontSize: "1.2em", display: "block", minHeight: "200px" }}
+            // repeat={Infinity}
+          />
           <Stack
             spacing={4}
             mt={8}
@@ -226,12 +220,12 @@ const Home = () => {
               <Heading fontSize={"2xl"} fontFamily={"body"}>
                 {result.name}
               </Heading>
-              <Text fontWeight={600} color={"gray.500"} mb={4}>
+              <Text fontWeight={600} color={"blue"} mb={4}>
                 {`@${result.login}`}
               </Text>
               <Text
                 textAlign={"center"}
-                color={useColorModeValue("gray.600", "white")}
+                color={useColorModeValue(["black"])}
                 px={3}
               >
                 {result.bio}
@@ -246,7 +240,7 @@ const Home = () => {
                 gap="10px"
               >
                 {SkillArr.map((ele) => (
-                  <Badge px={2} py={1} fontWeight={"400"}>
+                  <Badge px={2} py={1} fontWeight={"400"} key={ele}>
                     {ele}
                   </Badge>
                 ))}
@@ -257,8 +251,8 @@ const Home = () => {
                   flex={1}
                   fontSize={"sm"}
                   variant="outline"
-                  color={"white"}
-                  bg={useColorModeValue("blue.900", "blue.900")}
+                  color={"black"}
+                  bg={useColorModeValue("blue.100", "blue.900")}
                   rounded={"full"}
                   _focus={{
                     bg: "blue.900",
@@ -276,7 +270,7 @@ const Home = () => {
                   bg={"blue.800"}
                   color={"white"}
                   _hover={{
-                    bg: "blue.500",
+                    bg: "blue.300",
                   }}
                   _focus={{
                     bg: "blue.500",

@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import img1 from "../images/Buy-Fashion.png";
 import img2 from "../images/BazarBuzz.png";
+import img3 from "../images/Dashboard.png";
 const projects = [
   {
     title: "UPSTYLE.com",
@@ -17,9 +18,19 @@ const projects = [
     liveLink: "https://upstylenew.netlify.app/",
     image:
       "https://github.com/Biswajit2595/warlike-current-5989/assets/119488668/844e8624-7f60-42da-a24d-1837eabfc5c5",
-    techStack: "HTML, CSS, Javascript,typescript",
+    techStack: "HTML, CSS, Javascript, React ,typescript",
     description:
       "This project is a full stack application which focuses on e-commerce for men and women products. You can buy different products as per your body needs by exploring our website!",
+    daysToComplete: 5,
+  },
+  {
+    title: "Blog App",
+    image: img3,
+    githubLink: "https://github.com/rohitnayal12/blog__app",
+    liveLink: "https://blogapp-rosy.vercel.app/",
+    techStack: "React,Express,Node,MongoDB,JavaScript,HTML,CSS Chakra UI",
+    description:
+      "This project is a blog application through which you can show your thoughts to the readers. Create and share your thoughts with ease using our intuitive blog app. ",
     daysToComplete: 5,
   },
   {
@@ -44,16 +55,7 @@ const projects = [
       "Buy-fashion is your canvas to explore foot wares according to your choice. Immerse yourself in the rhythms of the world, uncover hidden gems, and craft your foot ware journey like never before",
     daysToComplete: 5,
   },
-  {
-    title: "BazarBuzz",
-    image: img2,
-    githubLink: "https://github.com/rohitnayal12/BazarBuzz",
-    liveLink: "https://curly-hobbies-5555.netlify.app/",
-    techStack: "HTML, CSS, Javascript,Json-Server",
-    description:
-      "This project is a e-commerce application which focuses on different daily needs and  men and women products. You can buy different products as per your home needs by exploring our website!",
-    daysToComplete: 5,
-  },
+ 
 ];
 
 function Project() {
@@ -96,11 +98,11 @@ function Project() {
             key={index}
             className="project-card"
             style={{
-              "box-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+              boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
               paddingLeft: "40px",
               paddingRight: "40px",
               paddingTop: "5px",
-              paddingBottom: "5px",
+              paddingBottom: "15px",
               borderRadius: "20px",
             }}
           >
@@ -108,12 +110,15 @@ function Project() {
               spacing="30%"
               display={"flex"}
               justifyContent={"space-evenly"}
+              // border={"1px solid black"}
+              backgroundColor={"gray.200"}
+              borderRadius={5}
             >
               <Link
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
+                className="project-github-link"
                 _hover={{ textDecoration: "none" }}
               >
                 <svg

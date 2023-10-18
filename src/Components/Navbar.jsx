@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { BsSun, BsMoonStarsFill } from "react-icons/bs";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import download from "downloadjs";
+
 
 export default function Navbar(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -78,31 +78,31 @@ export default function Navbar(props) {
               display={{ base: "none", md: "flex" }}
               fontSize="18px"
             >
-              <a href="#home" class="nav-link home">
+              <a href="#home" className="nav-link home" >
                 Home
               </a>
-              <a href="#about" class="nav-link about">
+              <a href="#about" className="nav-link about">
                 About
               </a>
-              <a href="#skills" class="nav-link skills">
+              <a href="#skills" className="nav-link skills">
                 Skills
               </a>
-              <a href="#projects" class="nav-link projects">
+              <a href="#projects" className="nav-link projects">
                 Projects
               </a>
-              <a href="#contact" class="nav-link contact">
+              <a href="#contact" className="nav-link contact">
                 Contacts
               </a>
 
-              <a
-                href={""}
+              <Button
+                // href={""}
                 target="_blank"
                 rel="noreferrer"
                 id="resume-button-1"
                 onClick={onButtonClick}
               >
                 Resume
-              </a>
+              </Button>
             </HStack>
             <Box>
               <Button
@@ -131,14 +131,14 @@ export default function Navbar(props) {
               </MenuButton>
               <MenuList>
                 <MenuItem>
-                  <a
-                    href="#"
+                  <Button
+                    // href="#"
                     id="resume-button-1"
                     className="nav-link resume"
-                    onclick={onButtonClick}
+                    onClick={onButtonClick}
                   >
                     Resume
-                  </a>
+                  </Button>
                 </MenuItem>
                 <MenuItem>
                   <a href="https://github.com/rohitnayal12">
@@ -161,7 +161,7 @@ export default function Navbar(props) {
               alignItems="left"
               fontSize={"20px"}
             >
-              <a href="#home" onClick={onClose}>
+              <a href="#home" onClick={onClose} >
                 Home
               </a>
               <a href="#about" onClick={onClose}>
@@ -177,14 +177,14 @@ export default function Navbar(props) {
                 Contacts
               </a>
 
-              <a
+              <Button
                 href="#"
                 id="resume-button-1"
                 className="nav-link resume"
-                onclick={onButtonClick}
+                onClick={onButtonClick}
               >
                 Resume
-              </a>
+              </Button>
             </Stack>
           </Box>
         ) : null}

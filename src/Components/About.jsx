@@ -70,7 +70,7 @@ const About = () => {
                   backgroundColor: "transparent", // Remove background color on hover
                 }}
                 color={"gray.500"}
-                fontSize={"lg"}
+                fontSize={20}
                 id="user-detail-intro"
               >
                 I am an MERN Full Stack Developer with a strong understanding of

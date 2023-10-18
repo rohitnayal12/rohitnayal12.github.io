@@ -84,8 +84,8 @@ const Techstack = () => {
               transform: isHovered ? "scale(1.1)" : "scale(1)",
             }}
           >
-            <SiHtml5 size="50px" class="skills-card-img" />
-            <Text mt={2} class="skills-card-name">
+            <SiHtml5 size="50px" className="skills-card-img" />
+            <Text mt={2} className="skills-card-name">
               HTML
             </Text>
           </Box>
@@ -181,7 +181,7 @@ const Techstack = () => {
             }}
           >
             <SiRedux size="50px" className="skills-card-img" />
-            <Text mt={2} class="skills-card-name">
+            <Text mt={2} className="skills-card-name">
               Redux
             </Text>
           </Box>
@@ -322,8 +322,8 @@ const Techstack = () => {
               transform: isHovered ? "scale(1.1)" : "scale(1)",
             }}
           >
-            <SiStyledcomponents size="50px" class="skills-card-img" />
-            <Text mt={2} class="skills-card-name">
+            <SiStyledcomponents size="50px" className="skills-card-img" />
+            <Text mt={2} className="skills-card-name">
               StyleComponent
             </Text>
           </Box>

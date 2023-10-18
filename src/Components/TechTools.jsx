@@ -251,8 +251,8 @@ const Techtool = () => {
               transform: isHovered ? "scale(1.1)" : "scale(1)",
             }}
           >
-            <SiVercel size="50px" class="skills-card-img" />
-            <Text mt={2} class="skills-card-name">
+            <SiVercel size="50px" className="skills-card-img" />
+            <Text mt={2} className="skills-card-name">
               Vercel
             </Text>
           </Box>
