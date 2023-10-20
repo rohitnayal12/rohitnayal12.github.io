@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import img1 from "../images/Buy-Fashion.png";
-import img2 from "../images/BazarBuzz.png";
+
 import img3 from "../images/Dashboard.png";
 const projects = [
   {

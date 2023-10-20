@@ -68,7 +68,7 @@ const Home = () => {
 
   const onButtonClick = async () => {
     window.open(
-      "https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing",
+      "https://drive.google.com/file/d/1ArJNmEthfCLC2-YLY0Rlb5tBLEfwSQDk/view?usp=sharing",
       "_blank"
     );
 
@@ -76,9 +76,9 @@ const Home = () => {
     setTimeout(() => {
       const link = document.createElement("a");
       link.href =
-        "https://drive.google.com/uc?export=download&id=1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq";
+        "https://drive.google.com/uc?export=download&id=1ArJNmEthfCLC2-YLY0Rlb5tBLEfwSQDk";
       link.download =
-        "https://drive.google.com/file/d/1N66VeTNGj4_IKU6BUyaRNkA8L8lZZqIq/view?usp=sharing"; // Set the desired file name here
+        "https://drive.google.com/file/d/1ArJNmEthfCLC2-YLY0Rlb5tBLEfwSQDk/view?usp=sharing"; // Set the desired file name here
       link.style.display = "none";
       document.body.appendChild(link);
       link.click();
