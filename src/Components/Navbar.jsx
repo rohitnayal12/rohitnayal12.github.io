@@ -18,26 +18,27 @@ import {
 import { BsSun, BsMoonStarsFill } from "react-icons/bs";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
-
 export default function Navbar(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
   const onButtonClick = async () => {
-   
+    window.open(
+      "https://drive.google.com/drive/folders/1jkogB-m1sj0ff1NdbC2Eko68mjqZZLzC?usp=sharing",
+      "_blank"
+    );
 
-    window.open("https://drive.google.com/file/d/1ArJNmEthfCLC2-YLY0Rlb5tBLEfwSQDk/view?usp=sharing", "_blank");
-
-    // Trigger the download after a short delay (e.g., 500 milliseconds)
     setTimeout(() => {
       const link = document.createElement("a");
-      link.href = "https://drive.google.com/uc?export=download&id=1ArJNmEthfCLC2-YLY0Rlb5tBLEfwSQDk";
-      link.download = "https://drive.google.com/file/d/1ArJNmEthfCLC2-YLY0Rlb5tBLEfwSQDk/view?usp=sharing"; // Set the desired file name here
+      link.href =
+        "https://drive.google.com/uc?export=download&id=1ArJNmEthfCLC2-YLY0Rlb5tBLEfwSQDk";
+      link.download =
+        "https://drive.google.com/drive/folders/1jkogB-m1sj0ff1NdbC2Eko68mjqZZLzC?usp=sharing"; // Set the desired file name here
       link.style.display = "none";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-    }, 200); // Adjust the delay as needed
+    }, 200);
   };
 
   return (
@@ -78,7 +79,7 @@ export default function Navbar(props) {
               display={{ base: "none", md: "flex" }}
               fontSize="18px"
             >
-              <a href="#home" className="nav-link home" >
+              <a href="#home" className="nav-link home">
                 Home
               </a>
               <a href="#about" className="nav-link about">
@@ -161,7 +162,7 @@ export default function Navbar(props) {
               alignItems="left"
               fontSize={"20px"}
             >
-              <a href="#home" onClick={onClose} >
+              <a href="#home" onClick={onClose}>
                 Home
               </a>
               <a href="#about" onClick={onClose}>

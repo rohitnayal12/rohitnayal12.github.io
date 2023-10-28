@@ -68,22 +68,21 @@ const Home = () => {
 
   const onButtonClick = async () => {
     window.open(
-      "https://drive.google.com/file/d/1ArJNmEthfCLC2-YLY0Rlb5tBLEfwSQDk/view?usp=sharing",
+      "https://drive.google.com/drive/folders/1jkogB-m1sj0ff1NdbC2Eko68mjqZZLzC?usp=sharing",
       "_blank"
     );
 
-    // Trigger the download after a short delay (e.g., 500 milliseconds)
     setTimeout(() => {
       const link = document.createElement("a");
       link.href =
         "https://drive.google.com/uc?export=download&id=1ArJNmEthfCLC2-YLY0Rlb5tBLEfwSQDk";
       link.download =
-        "https://drive.google.com/file/d/1ArJNmEthfCLC2-YLY0Rlb5tBLEfwSQDk/view?usp=sharing"; // Set the desired file name here
+        "https://drive.google.com/drive/folders/1jkogB-m1sj0ff1NdbC2Eko68mjqZZLzC?usp=sharing"; // Set the desired file name here
       link.style.display = "none";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-    }, 200); // Adjust the delay as needed
+    }, 200);
   };
 
   return (
@@ -110,20 +109,15 @@ const Home = () => {
             onMouseLeave={() => setIsHovered(false)}
             _hover={{
               transform: isHovered ? "scale(1.10)" : "scale(1)",
-              color: "teal.500", // Change font color to teal on hover
-              backgroundColor: "transparent", // Remove background color on hover
+              color: "teal.500",
+              backgroundColor: "transparent",
             }}
           >
             A MERN Stack Developer
           </Text>
           <Box>
             <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed once, initially
-                "Hi, I am Rohit Nayal",
-                3000,
-                "",
-              ]}
+              sequence={["Hi, I am Rohit Nayal", 3000, ""]}
               omitDeletionAnimation={true}
               speed={50}
               style={{ fontSize: "3em" }}
@@ -132,7 +126,7 @@ const Home = () => {
           </Box>
 
           <TypeAnimation
-            splitter={(str) => str.split(/(?= )/)} 
+            splitter={(str) => str.split(/(?= )/)}
             sequence={[
               "A highly motivated and adaptable individual with a passion for implementing technical and logical skills in the creative domain. Specializes in quickly learning new skills and tech stacks,problem-solving, responsive design principles, and teamwork. Aspires to build a career in an organization with dedicated people that aligns with their career goals.",
               3000,
@@ -140,7 +134,6 @@ const Home = () => {
             speed={{ type: "keyStrokeDelayInMs", value: 90 }}
             omitDeletionAnimation={true}
             style={{ fontSize: "1.2em", display: "block", minHeight: "200px" }}
-            // repeat={Infinity}
           />
           <Stack
             spacing={4}
@@ -192,8 +185,8 @@ const Home = () => {
               paddingBottom={16}
               _hover={{
                 transform: isHovered ? "scale(1.1)" : "scale(1)",
-                backgroundColor: "teal.500", // Change background color to teal on hover
-                color: "white", // Change font color to white on hover
+                backgroundColor: "teal.500",
+                color: "white",
               }}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
