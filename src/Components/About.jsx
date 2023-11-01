@@ -46,6 +46,8 @@ const About = () => {
               <Text
                 textTransform={"uppercase"}
                 color={"white.400"}
+                id="user-detail-name"
+                
                 border="1px solid black"
                 fontWeight={600}
                 fontSize={"sm"}
@@ -75,7 +77,7 @@ const About = () => {
               >
                 I am an MERN Full Stack Developer with a strong understanding of
                 Web Development and exceptional problem-solving skills in HTML,
-                CSS, JavaScript, React and Redux. . Currently, I am seeking a
+                CSS, JavaScript, React, Redux , Node and Express . Currently, I am seeking a
                 challenging role as a MERN Stack developer. As a passionate
                 Full-Stack Web Developer, I have a keen eye for stunning designs
                 and a deep commitment to social causes. I am eager to expand my

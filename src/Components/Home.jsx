@@ -46,10 +46,15 @@ const Home = () => {
   const [result, setResult] = useState({});
   const [isHovered, setIsHovered] = useState(false);
   const SkillArr = [
+    "HTML",
+    "CSS",
     "JAVASCRIPT",
     "REACT",
     "REDUX",
-    "REST API",
+    "NODE",
+    "EXPRESS",
+    "MONGODB",
+    "CHAKRA UI",
     "GIT",
     "POSTMAN",
   ];
